@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="pl_PL">
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>TTR 2016</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="style.css" rel="stylesheet">
-		<!-- Custom CSS -->
-    	<link href="css/full-slider.css" rel="stylesheet">
-	</head>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <title><?php wp_title(); ?></title>
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+        <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+        <?php wp_head(); ?>
+    </head>
 	
-	<body>
+	<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
@@ -22,15 +21,28 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#"><img src="images/Logo.jpg"></a>
+	          <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
 	        </div>
-	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-right">
+				<?php /* Primary navigation */
+					wp_nav_menu( array(
+						'menu' => 'main-menu',
+						'depth' => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => 'navbar',
+						'menu_class' => 'nav navbar-nav navbar-right',
+						//Process nav menu using our custom nav walker
+						'walker' => new wp_bootstrap_navwalker())
+					);
+				?>
+	          
+	          <?php /*<ul class="nav navbar-nav navbar-right">
 		         <li><a href="oturnieju.html">O turnieju</a></li>
 		         <li><a href="partnerzy.html">Partnerzy</a></li>
 		         <li><a href="strefa.html">Strefa zawodników</a></li>
 		         <li><a href="kontakt.html">Kontakt</a></li>
-	          </ul>
-	        </div><!--/.nav-collapse -->
+	          </ul>*/
+	          ?>
+	        <!--/.nav-collapse -->
 	      </div>
 	    </nav>
