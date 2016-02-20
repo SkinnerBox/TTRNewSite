@@ -7,6 +7,10 @@ License: GNU General Public License v2 or later
 Text Domain: TTR
 */
 
+body {
+	padding-top: 80px;
+}
+
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {

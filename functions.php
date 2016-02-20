@@ -23,15 +23,6 @@ function bootstrap_files()
 	wp_enqueue_style('slider_style'); // Enqueue it!
 }
 
-function mbe_body_class($classes){
-	if(is_user_logged_in()){
-		$classes[] = 'body-logged-in';
-	} else{
-		$classes[] = 'body-logged-out';
-	}
-	return $classes;
-}
-
 // Admin bar trick
 function mbe_wp_head(){
 	echo '<style>'.PHP_EOL;
@@ -63,7 +54,7 @@ add_action('wp_head', 'mbe_wp_head'); // Admin menu nad menu strony
 add_action('init', 'register_my_menus'); // Add menus
 
 // Add Filters
-add_filter('body_class', 'mbe_body_class');
+
 
 // Register custom navigation walker
 require_once('wp_bootstrap_navwalker.php');
