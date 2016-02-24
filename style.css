@@ -7,12 +7,108 @@ License: GNU General Public License v2 or later
 Text Domain: TTR
 */
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  	position: relative;
+  	min-height: 100%;
+}
 body {
-	padding-top: 80px;
+  /* Margin bottom by footer height */
+  	margin-bottom: 60px;
+}
+html, body {
+	 overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body.home {
+	margin-bottom: 0px;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
 }
 
-/* =WordPress Core
--------------------------------------------------------------- */
+body > header {
+	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */	
+  	/*padding: 60px 15px 0;*/
+  	margin-bottom: 50px;
+}
+body.home > header {
+	margin-top: 0px;
+}
+
+.footer > .container {
+  	padding-right: 15px;
+  	padding-left: 15px;
+}
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
+    padding: 50px 0;
+}
+
+.image-bg-fixed-height {
+	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
+    height: 450px;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+.img-left {
+	float: left;
+	margin-left: 60px;
+}
+
+.img-right {
+	float: right;
+	margin-right: 60px;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.children
+{ display: none; }
+
+.current_page_item .children,
+.current_page_ancestor .children,
+.current_page_parent .children
+
+{ display: block; }
+
+
+/*
+ * WordPress Core
+ * --------------------------------------------------
+ */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
