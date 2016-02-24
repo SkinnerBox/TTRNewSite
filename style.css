@@ -35,10 +35,17 @@ footer {
 body > header {
 	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */	
   	/*padding: 60px 15px 0;*/
-  	margin-bottom: 50px;
 }
 body.home > header {
 	margin-top: 0px;
+}
+
+body > .container {
+	padding-top: 100px;
+}
+
+body > .container.under-photo {
+	padding-top: 50px;
 }
 
 .footer > .container {
@@ -46,6 +53,54 @@ body.home > header {
   	padding-left: 15px;
 }
 
+/*
+ * Menu styles 
+ */
+.navbar {
+	 /*background-color: #428bca;*/
+	 -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+	         box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+	 border-bottom: #FF0090 3px solid;
+}
+#navbar .navbar-nav > .active > a {
+	background-color: transparent;
+}
+
+/* Nav links */
+.menu-item {
+	 position: relative;
+	 display: inline-block;
+	 padding: 0 10px;
+	 font-weight: 500;
+	 color: #cdddeb;
+}
+.menu-item:hover,
+.menu-item:focus {
+	 color: #FF0090;
+	 text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.nav .active, .nav .current-page-ancestor {
+	  color: #FF0090;
+}
+.nav .active:after, .nav .current-page-ancestor:after {
+	  position: absolute;
+	  bottom: 0;
+	  left: 50%;
+	  width: 0;
+	  height: 0;
+	  margin-left: -5px;
+	  vertical-align: middle;
+	  content: " ";
+	  border-right: 5px solid transparent;
+	  border-bottom: 5px solid;
+	  border-left: 5px solid transparent;
+}
+
+/*----------------------------------*/
+
+/* Full Width Photo */
 .image-bg-fluid-height,
 .image-bg-fixed-height {
     text-align: center;
@@ -78,8 +133,11 @@ body.home > header {
 	float: right;
 	margin-right: 60px;
 }
+/*----------------------------------*/
 
-/* Sidebar modules for boxing content */
+/*
+ * Sidebar modules for boxing content
+ */
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
@@ -95,15 +153,41 @@ body.home > header {
   margin-bottom: 0;
 }
 
-.children
-{ display: none; }
+.children { 
+	display: none; 
+}
 
 .current_page_item .children,
 .current_page_ancestor .children,
-.current_page_parent .children
+.current_page_parent .children { 
+	display: block; 
+}
 
-{ display: block; }
+.sidebar-module-inset ul {
+    margin: 0; 
+    padding: 0;
+    width:185px;
+    list-style-type: none;
+}
 
+.sidebar-module-inset ul li a {
+    text-decoration: none;
+    color: white; 
+    padding: 10.5px 11px;
+    background-color: #005555;
+    display:block;
+}
+ 
+.sidebar-module-inset ul li a:visited {
+    color: white;
+}
+ 
+.sidebar-module-inset ul li a:hover, .sidebar-module-inset ul li.current_page_item a {
+    color: white;
+    background-color: #5FD367;
+}
+
+/*----------------------------------*/
 
 /*
  * WordPress Core
