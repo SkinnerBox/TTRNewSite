@@ -36,10 +36,10 @@ function slider_style_loader(){
 }
 
 // Załadowanie pliku od stylu offcanvas
-function offcanvas_load(){
+function sidemenu_slides_load(){
 	if (!is_admin() ){
-		wp_register_script('offcanvas_js', get_template_directory_uri() . '/js/offcanvas.js', array('jquery'), NULL, true); // Conditional script(s)
-		wp_enqueue_script('offcanvas_js'); // Enqueue it!
+		wp_register_script('menu-slides_js', get_template_directory_uri() . '/js/menu-slides.js', array('jquery'), NULL, true); // Conditional script(s)
+		wp_enqueue_script('menu-slides_js'); // Enqueue it!
 
 		//wp_register_style('slider_style', get_template_directory_uri() . '/css/full-slider.css', false, NULL, 'all');
 		//wp_enqueue_style('slider_style'); // Enqueue it!
@@ -74,7 +74,7 @@ function register_my_menus(){
 add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11); // Add jQuery
 add_action('wp_enqueue_scripts', 'bootstrap_files'); // Add Theme Stylesheet
 add_action('wp_enqueue_scripts', 'slider_style_loader'); // Load style for front-page
-//add_action('wp_enqueue_scripts', 'offcanvas_load'); // Load offcanvas js
+add_action('wp_enqueue_scripts', 'sidemenu_slides_load'); // Load sidemenu effect
 add_action('wp_head', 'mbe_wp_head'); // Admin menu nad menu strony
 add_action('init', 'register_my_menus'); // Add menus
 
