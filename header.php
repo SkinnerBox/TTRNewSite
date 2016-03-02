@@ -26,23 +26,15 @@
 				<?php /* Primary navigation */
 					wp_nav_menu( array(
 						'menu' => 'main-menu',
-						'depth' => 2,
+						'depth' => 0,
 						'container'         => 'div',
 						'container_class'   => 'collapse navbar-collapse',
 						'container_id'      => 'navbar',
-						'menu_class' => 'nav navbar-nav navbar-right',
+						'menu_class' 		=> 'nav navbar-nav navbar-right',
 						//Process nav menu using our custom nav walker
 						'walker' => new wp_bootstrap_navwalker())
 					);
 				?>
-	          
-	          <?php /*<ul class="nav navbar-nav navbar-right">
-		         <li><a href="oturnieju.html">O turnieju</a></li>
-		         <li><a href="partnerzy.html">Partnerzy</a></li>
-		         <li><a href="strefa.html">Strefa zawodników</a></li>
-		         <li><a href="kontakt.html">Kontakt</a></li>
-	          </ul>*/
-	          ?>
 	        <!--/.nav-collapse -->
 	      </div>
 	    </nav>

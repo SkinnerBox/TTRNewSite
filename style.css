@@ -7,6 +7,13 @@ License: GNU General Public License v2 or later
 Text Domain: TTR
 */
 
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(http://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -57,10 +64,10 @@ body > .container.under-photo {
  * Menu styles 
  */
 .navbar {
-	 /*background-color: #428bca;*/
-	 -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-	         box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-	 border-bottom: #FF0090 3px solid;
+	/*background-color: #428bca;*/
+	-webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+	        box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+	border-bottom: #FF0090 3px solid;
 }
 #navbar .navbar-nav > .active > a {
 	background-color: transparent;
@@ -68,34 +75,88 @@ body > .container.under-photo {
 
 /* Nav links */
 .menu-item {
-	 position: relative;
-	 display: inline-block;
-	 padding: 0 10px;
-	 font-weight: 500;
-	 color: #cdddeb;
+	position: relative;
+	display: inline-block;
+	padding: 0 10px;
+	font-weight: 500;
+	color: #cdddeb;
 }
 .menu-item:hover,
 .menu-item:focus {
-	 color: #FF0090;
-	 text-decoration: none;
+	color: #FF0090;
+	text-decoration: none;
 }
 
 /* Active state gets a caret at the bottom */
 .nav .active, .nav .current-page-ancestor {
-	  color: #FF0090;
+	color: #FF0090;
 }
 .nav .active:after, .nav .current-page-ancestor:after {
-	  position: absolute;
-	  bottom: 0;
-	  left: 50%;
-	  width: 0;
-	  height: 0;
-	  margin-left: -5px;
-	  vertical-align: middle;
-	  content: " ";
-	  border-right: 5px solid transparent;
-	  border-bottom: 5px solid;
-	  border-left: 5px solid transparent;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	margin-left: -5px;
+	vertical-align: middle;
+	content: " ";
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid;
+	border-left: 5px solid transparent;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#menu-item-499 a {
+	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
+	animation: neon1 1.5s ease-in-out infinite alternate;
+	color: #ffffff;
+}
+
+#menu-item-499 a:hover {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+  color: #ffffff;
+}
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+/*glow*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
 }
 
 /*----------------------------------*/
