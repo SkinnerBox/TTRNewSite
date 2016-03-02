@@ -12,7 +12,7 @@
 	
 	<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 		<!-- Navigation -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse navbar-fixed-top zone-menu">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,11 +25,11 @@
 	        </div>
 				<?php /* Primary navigation */
 					wp_nav_menu( array(
-						'theme_location' => 'main-menu',
-						'menu' => 'main-menu',
+						'theme_location' => 'zone-menu',
+						'menu' => 'zone-menu',
 						'depth' => 0,
 						'container'         => 'div',
-						'container_class'   => 'collapse navbar-collapse',
+						'container_class'   => 'collapse navbar-collapse zone',
 						'container_id'      => 'navbar',
 						'menu_class' 		=> 'nav navbar-nav navbar-right',
 						//Process nav menu using our custom nav walker

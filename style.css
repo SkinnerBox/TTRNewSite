@@ -69,6 +69,10 @@ body > .container.under-photo {
 	        box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 	border-bottom: #FF0090 3px solid;
 }
+.navbar.zone-menu {
+	/*background-color: #428bca;*/
+	border-bottom: #28EF00 3px solid;
+}
 #navbar .navbar-nav > .active > a {
 	background-color: transparent;
 }
@@ -87,9 +91,18 @@ body > .container.under-photo {
 	text-decoration: none;
 }
 
+.zone .menu-item:hover,
+.zone .menu-item:focus {
+	color: #28EF00;
+	text-decoration: none;
+}
+
 /* Active state gets a caret at the bottom */
 .nav .active, .nav .current-page-ancestor {
 	color: #FF0090;
+}
+.zone .nav .active, .zone .nav .current-page-ancestor {
+	color: #28EF00;
 }
 .nav .active:after, .nav .current-page-ancestor:after {
 	position: absolute;
@@ -112,14 +125,28 @@ a {
 	transition: all 0.5s;
 }
 
-#menu-item-499 a {
+/* Ostylowanie wstawek Font-Awesome w menu*/
+#navbar ul li.fa.fa-lg a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+   	margin-left: 10px;
+}
+
+#navbar .fa::before {
+	float: left;
+	margin-top: 19px;
+}
+
+/* Efekt dla błysczącej pozycji w menu*/
+#menu-item-530 a {
 	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
 	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
 	animation: neon1 1.5s ease-in-out infinite alternate;
 	color: #ffffff;
 }
 
-#menu-item-499 a:hover {
+#menu-item-530 a:hover {
   -webkit-animation: none;
   -moz-animation: none;
   animation: none;
