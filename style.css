@@ -23,6 +23,7 @@ html {
 body {
   /* Margin bottom by footer height */
   	margin-bottom: 60px;
+	background-color:#FFFFFF;
 }
 html, body {
 	 overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -30,14 +31,18 @@ html, body {
 body.home {
 	margin-bottom: 0px;
 }
+
+
 footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 60px;
-	background-color: #f5f5f5;
-}
+	background-color: #ffffff;
+	color: #0000ff;
+	text-align:center;
+	}
 
 body > header {
 	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */	
@@ -83,13 +88,15 @@ body > .container.under-photo {
 }
 .menu-item:hover,
 .menu-item:focus {
-	color: #FF0090;
+	color: #FF0090;  
 	text-decoration: none;
 }
 
 /* Active state gets a caret at the bottom */
 .nav .active, .nav .current-page-ancestor {
-	color: #FF0090;
+	color: #FF0090;  
+	
+	
 }
 .nav .active:after, .nav .current-page-ancestor:after {
 	position: absolute;
@@ -276,14 +283,16 @@ a {
 	font-size: 25px;
 	font-weight: bold;
 	display: block;
-	background: #bd0e36;
+	/*background: #bd0e36; */
+	background:#FF0090;
 	color: #ffffff;
 	border-bottom: 1px solid #5e071b;
 	text-transform: uppercase;
 	position: relative;
 }
 #sidebar-menu > ul > li > a > span {
-	background: #ed1144;
+	/*background: #ed1144;  */ 
+	background:#FF0090; 
 	padding: 10px;
 	display: block;
 	font-size: 13px;
@@ -319,11 +328,11 @@ a {
 #sidebar-menu ul ul a {
 	padding: 10px;
 	display: block;
-	color: #ed1144;
+	color: #ed1144; 
 	font-size: 13px;
 }
 #sidebar-menu ul ul a:hover {
-	color: #bd0e36;
+	color: #bd0e36; 
 }
 #sidebar-menu ul ul li.odd {
 	background: #f4f4f4;
@@ -427,3 +436,8 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+h1.otur {
+	
+	border-bottom: medium solid black;
+        border-top: medium solid black;}
