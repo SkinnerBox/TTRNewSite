@@ -64,13 +64,28 @@ function mbe_wp_head(){
 // Rejestracja menu
 function register_my_menus(){
 	register_nav_menus(
-			array(
-					'main-menu' => 'Menu Główne',
-					'zone-menu' => 'Strefa Zawodników',
-					'lower-menu' => 'Menu Dolne'
-			)
-			);
+		array(
+			'main-menu' => 'Menu Główne',
+			'zone-menu' => 'Strefa Zawodników',
+			'lower-menu' => 'Menu Dolne'
+		)
+	);
 }
+
+function register_my_sidebars(){
+	register_sidebar(
+		array(
+			'id' => 'primary',
+			'name' => __( 'Główny panel boczny' ),
+			'description' => __( 'Panel boczny widoczny w strefie zawodników.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h2 class="widgettitle">',
+			'after_title' => '</h2>'
+		)
+	);
+}
+	
 
 /*------------------------------------*\
  	Actions + Filters + ShortCodes
@@ -84,6 +99,7 @@ add_action('wp_enqueue_scripts', 'sidemenu_slides_load'); // Load sidemenu effec
 add_action('wp_enqueue_scripts','enqueue_font_awesome');
 add_action('wp_head', 'mbe_wp_head'); // Admin menu nad menu strony
 add_action('init', 'register_my_menus'); // Add menus
+add_action('widgets_init', 'register_my_sidebars' ); // Add sidebar with widgets
 
 // Add Filters
 
