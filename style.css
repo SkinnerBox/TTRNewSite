@@ -23,7 +23,7 @@ html {
 body {
   /* Margin bottom by footer height */
   	margin-bottom: 60px;
-	background-color:#FFFFFF;
+	
 }
 html, body {
 	 overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -31,18 +31,18 @@ html, body {
 body.home {
 	margin-bottom: 0px;
 }
-
-
 footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 60px;
+	/*background-color: #f5f5f5; */
 	background-color: #ffffff;
 	color: #0000ff;
 	text-align:center;
-	}
+
+}
 
 body > header {
 	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */	
@@ -74,6 +74,10 @@ body > .container.under-photo {
 	        box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 	border-bottom: #FF0090 3px solid;
 }
+.navbar.zone-menu {
+	/*background-color: #428bca;*/
+	border-bottom: #28EF00 3px solid;
+}
 #navbar .navbar-nav > .active > a {
 	background-color: transparent;
 }
@@ -88,15 +92,22 @@ body > .container.under-photo {
 }
 .menu-item:hover,
 .menu-item:focus {
-	color: #FF0090;  
+	color: #FF0090;
+	text-decoration: none;
+}
+
+.zone .menu-item:hover,
+.zone .menu-item:focus {
+	color: #28EF00;
 	text-decoration: none;
 }
 
 /* Active state gets a caret at the bottom */
 .nav .active, .nav .current-page-ancestor {
-	color: #FF0090;  
-	
-	
+	color: #FF0090;
+}
+.zone .nav .active, .zone .nav .current-page-ancestor {
+	color: #28EF00;
 }
 .nav .active:after, .nav .current-page-ancestor:after {
 	position: absolute;
@@ -119,18 +130,46 @@ a {
 	transition: all 0.5s;
 }
 
-#menu-item-499 a {
+/* Ostylowanie wstawek Font-Awesome w menu*/
+#navbar ul li.fa.fa-lg a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+   	margin-left: 10px;
+}
+
+#navbar .fa::before {
+	float: left;
+	margin-top: 19px;
+}
+
+/* Efekt dla błysczącej pozycji w menu*/
+#menu-item-97 a {
 	-webkit-animation: neon1 1.5s ease-in-out infinite alternate;
 	-moz-animation: neon1 1.5s ease-in-out infinite alternate;
 	animation: neon1 1.5s ease-in-out infinite alternate;
 	color: #ffffff;
 }
 
-#menu-item-499 a:hover {
-  -webkit-animation: none;
-  -moz-animation: none;
-  animation: none;
-  color: #ffffff;
+#menu-item-97 a:hover {
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+	color: #ffffff;
+}
+
+#menu-item-510 a {
+	-webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+	-moz-animation: neon2 1.5s ease-in-out infinite alternate;
+	animation: neon2 1.5s ease-in-out infinite alternate;
+	color: #ffffff;
+}
+
+#menu-item-510 a:hover {
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+	color: #ffffff;
 }
 
 /*glow for webkit*/
@@ -163,6 +202,39 @@ a {
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #28EF00, 0 0 70px #28EF00, 0 0 80px #28EF00, 0 0 100px #28EF00, 0 0 150px #28EF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #28EF00, 0 0 35px #28EF00, 0 0 40px #28EF00, 0 0 50px #28EF00, 0 0 75px #28EF00;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #28EF00, 0 0 70px #28EF00, 0 0 80px #28EF00, 0 0 100px #28EF00, 0 0 150px #28EF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #28EF00, 0 0 35px #28EF00, 0 0 40px #28EF00, 0 0 50px #28EF00, 0 0 75px #28EF00;
+  }
+}
+
+/*glow*/
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #28EF00, 0 0 70px #28EF00, 0 0 80px #28EF00, 0 0 100px #28EF00, 0 0 150px #28EF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #28EF00, 0 0 35px #28EF00, 0 0 40px #28EF00, 0 0 50px #28EF00, 0 0 75px #28EF00;
   }
 }
 
@@ -283,16 +355,14 @@ a {
 	font-size: 25px;
 	font-weight: bold;
 	display: block;
-	/*background: #bd0e36; */
-	background:#FF0090;
+	background: #bd0e36;
 	color: #ffffff;
 	border-bottom: 1px solid #5e071b;
 	text-transform: uppercase;
 	position: relative;
 }
 #sidebar-menu > ul > li > a > span {
-	/*background: #ed1144;  */ 
-	background:#FF0090; 
+	background: #ed1144;
 	padding: 10px;
 	display: block;
 	font-size: 13px;
@@ -328,11 +398,11 @@ a {
 #sidebar-menu ul ul a {
 	padding: 10px;
 	display: block;
-	color: #ed1144; 
+	color: #ed1144;
 	font-size: 13px;
 }
 #sidebar-menu ul ul a:hover {
-	color: #bd0e36; 
+	color: #bd0e36;
 }
 #sidebar-menu ul ul li.odd {
 	background: #f4f4f4;
@@ -436,8 +506,3 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
-
-h1.otur {
-	
-	border-bottom: medium solid black;
-        border-top: medium solid black;}

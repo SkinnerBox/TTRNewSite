@@ -1,7 +1,7 @@
-﻿    <!-- Footer -->
+    <!-- Footer -->
 	<footer>
 	
-	
+	<br class="clear"/><br class="clear"/>
 	<div class="container">
 	<div class="row">
 	
@@ -25,14 +25,15 @@
 	<br class="clear"/><br class="clear"/>
 	 <?php /* Primary navigation */ 
 					wp_nav_menu( array(
-						'menu' => 'main-menu',
+						'menu' => 'lower-menu',
 						'depth' => 0,
 						'container'         => 'div',
 						'container_class'   => 'collapse navbar-collapse',
 						'container_id'      => 'navbar',
-						// 'menu_class' 		=> 'nav navbar-nav navbar-default',
+					        //'menu_class' 		=> 'nav navbar-nav navbar-default',
 						//Process nav menu using our custom nav walker
-						'walker' => new wp_bootstrap_navwalker())
+						'walker' => new wp_bootstrap_navwalker()
+						)
 					);
 				?>
 				

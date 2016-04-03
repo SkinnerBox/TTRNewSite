@@ -46,6 +46,11 @@ function sidemenu_slides_load(){
 	}
 }
 
+// Załadowanie Font-Awesome
+function enqueue_font_awesome(){
+	wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.css');
+}
+
 // Admin bar trick
 function mbe_wp_head(){
 	echo '<style>'.PHP_EOL;
@@ -61,7 +66,8 @@ function register_my_menus(){
 	register_nav_menus(
 			array(
 					'main-menu' => 'Menu Główne',
-					'zone-menu' => 'Strefa Zawodników'
+					'zone-menu' => 'Strefa Zawodników',
+					'lower-menu' => 'Menu Dolne'
 			)
 			);
 }
@@ -75,6 +81,7 @@ add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11); // Add jQuery
 add_action('wp_enqueue_scripts', 'bootstrap_files'); // Add Theme Stylesheet
 add_action('wp_enqueue_scripts', 'slider_style_loader'); // Load style for front-page
 add_action('wp_enqueue_scripts', 'sidemenu_slides_load'); // Load sidemenu effect
+add_action('wp_enqueue_scripts','enqueue_font_awesome');
 add_action('wp_head', 'mbe_wp_head'); // Admin menu nad menu strony
 add_action('init', 'register_my_menus'); // Add menus
 

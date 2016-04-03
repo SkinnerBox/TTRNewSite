@@ -12,16 +12,15 @@
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <header class="image-bg-fluid-height">
     	<div class="container">
-       
-       
-       
-        <div style="text-align:left;background: url('http://www.wykop.pl/cdn/c3201142/comment_F0wV5KrrXXMZe4KyG0vB6QOQLkVPX3YD.jpg'); height:30%; width:42%;">
+      <!--  <img class="img-responsive img-left" src="http://placehold.it/200x200&text=Logo" alt=""> -->
+       <div style="text-align:left;background: url('http://www.wykop.pl/cdn/c3201142/comment_F0wV5KrrXXMZe4KyG0vB6QOQLkVPX3YD.jpg'); height:30%; width:42%;">
        <p style="text-align:left;font-size:450%;color:black;font-family:sans-serif;font-style:normal;">&nbsp; <?php echo $wp_query->post->post_title; ?></p></div>
-       
-        
-	</div>
+
+        </div>
     </header>
 	<div class="container under-photo">
+	
+	
 	<div class="row"><div class="col-md-12">
 	<h1>
 	<?php if ($post->post_parent) {echo get_the_title($post->post_parent)." ->";} ?>  <?php echo $wp_query->post->post_title; ?>
@@ -29,6 +28,11 @@
 	<br class="clear"/>
 	</div>
 	</div>
+
+	
+	
+	
+	
 		<div class="row">
 		
 			<div class="col-md-3 col-md-push-8 col-md-offset-1">
@@ -42,8 +46,5 @@
 				?>
 			</div>
 		</div><!-- /row -->
-		
-		
 	</div><!-- /container -->
-	
 <?php get_footer(); ?>
