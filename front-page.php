@@ -20,24 +20,34 @@ get_header(); ?>
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
+		<a href="<?php echo get_site_url();?>/rejestracja/">
+		        <!-- Set the first background image using inline CSS below. -->
+		        <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/front/5_SKALP.jpg');"></div>
+		        <div class="carousel-caption">
+				<div class="frame">
+		            		<h2>Rejestracja otwarta!</h2>
+				</div>
+		        </div>
+		</a>
             </div>
             <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
+		<a href="http://www.youtube.com/watch?v=Ehv0iriLTKE"> 
+		        <!-- Set the second background image using inline CSS below. -->
+		        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+		        <div class="carousel-caption">
+				<div class="frame">
+					<h2>Caption 2</h2>
+				</div>
+		        </div>
+		</a>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+			<div class="frame">
+				<h2>Caption 3</h2>
+			</div>	
                 </div>
             </div>
         </div>

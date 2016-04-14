@@ -11,31 +11,31 @@
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <header class="image-bg-fluid-height">
-    	<div class="container">
-      <!--  <img class="img-responsive img-left" src="http://placehold.it/200x200&text=Logo" alt=""> -->
-       <div style="text-align:left;background: url('http://www.wykop.pl/cdn/c3201142/comment_F0wV5KrrXXMZe4KyG0vB6QOQLkVPX3YD.jpg'); height:30%; width:42%;">
-       <p style="text-align:left;font-size:450%;color:black;font-family:sans-serif;font-style:normal;">&nbsp; <?php echo $wp_query->post->post_title; ?></p></div>
-
+	<div class="container">
+		<!--  <img class="img-responsive img-left" src="http://placehold.it/200x200&text=Logo" alt=""> -->
+       			<p class="title"><?php echo $wp_query->post->post_title; ?></p>
         </div>
     </header>
 	<div class="container under-photo">
 	
-	
+	<?php /*
 	<div class="row"><div class="col-md-12">
-	<h1>
-	<?php if ($post->post_parent) {echo get_the_title($post->post_parent)." ->";} ?>  <?php echo $wp_query->post->post_title; ?>
-	</h1> 
+	
+	<h4>
+	<?php if ($post->post_parent) {echo get_the_title($post->post_parent)." &#x21E2; ";} ?>  <?php echo $wp_query->post->post_title; ?>
+	</h4> 
 	<br class="clear"/>
 	</div>
+	
 	</div>
-
+	*/?>
 	
 	
 	
 	
 		<div class="row">
 		
-			<div class="col-md-3 col-md-push-8 col-md-offset-1">
+			<div class="col-md-3 col-md-push-8">
 				<?php require_once("sidemenu.php"); ?>
 	        </div><!-- /.blog-sidebar -->
 	        

@@ -22,7 +22,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  	margin-bottom: 60px;
+  	margin-bottom: 205px;
 	
 }
 html, body {
@@ -36,12 +36,40 @@ footer {
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
-	height: 60px;
+	height: 205px;
 	/*background-color: #f5f5f5; */
 	background-color: #ffffff;
-	color: #0000ff;
+	color: #ed1144;
 	text-align:center;
+}
 
+footer .footer-links, footer #navbar ul.menu li a {
+	color: #ed1144;
+}
+footer .footer-links:hover, footer #navbar ul.menu li a:hover {
+	color: #A10025;
+}
+
+footer .zone-links, footer #navbar-zone ul#menu-menu-dolne li a {
+	color: #27E300;
+}
+footer .zone-links:hover, footer #navbar-zone ul#menu-menu-dolne li a:hover {
+	color: #1FB300;
+}
+footer.zone {
+	color: #27E300;
+}
+
+header .container{
+	text-align: left;
+}
+
+header .title{
+	text-align:left;
+	font-size:450%;
+	padding: 0 20px;
+	background-color: white;
+	display: inline-block;
 }
 
 body > header {
@@ -58,6 +86,10 @@ body > .container {
 
 body > .container.under-photo {
 	padding-top: 50px;
+}
+
+.container .media .media-body time {
+	font: 30px;
 }
 
 .footer > .container {
@@ -132,9 +164,9 @@ a {
 
 /* Ostylowanie wstawek Font-Awesome w menu*/
 #navbar ul li.fa.fa-lg a {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857;
+    	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    	font-size: 14px;
+    	line-height: 1.42857;
    	margin-left: 10px;
 }
 
@@ -142,6 +174,56 @@ a {
 	float: left;
 	margin-top: 19px;
 }
+
+/* Style paginacji */
+ul.page-numbers {
+    list-style: none;
+    margin: 0;
+}
+
+.page-numbers:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+ul.page-numbers li {
+    display: block;
+    float: left;
+    margin: 0 4px 4px 0;
+    text-align: center;
+}
+
+.page-numbers a,
+.page-numbers span {
+    line-height: 1.6em;
+    display: block;
+    padding: 0 6px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #888;
+}
+
+.page-numbers a span { padding: 0 }
+
+.page-numbers a:hover,
+.page-numbers.current,
+.page-numbers.current:hover {
+    color: #000;
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.page-numbers:hover { text-decoration: none }
+/*----------------------------------*/
 
 /* Efekt dla błysczącej pozycji w menu*/
 #menu-item-97 a {
@@ -239,6 +321,42 @@ a {
 }
 
 /*----------------------------------*/
+
+/* Right fixed menu */
+.affix {
+    right:0;
+    position:fixed;
+}
+
+/* Carousel customization */
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+    font-size: 100px;
+}
+
+.carousel-caption > .frame{
+	background-color: #000000;
+	opacity: 0.7;
+    	filter: alpha(opacity=70); /* For IE8 and earlier */
+	display: inline-block;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
+	padding: 5px 30px;
+}
+.carousel-caption > .frame > h2 {
+	opacity: 1;
+    	filter: alpha(opacity=100); /* For IE8 and earlier */
+    	line-height: normal;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 2px 30px 30px 30px;
+}
+.carousel-indicators {
+  	bottom: 50px;
+	z-index: 15;
+}
 
 /* Full Width Photo */
 .image-bg-fluid-height,
@@ -425,6 +543,9 @@ div.aligncenter {
     display: block;
     margin: 5px auto 5px auto;
 }
+
+div.powrot {padding-top:30px;}
+
 .alignright {
     float:right;
     margin: 5px 0 20px 20px;
