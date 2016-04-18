@@ -369,7 +369,9 @@ ul.page-numbers li {
 }
 
 .image-bg-fluid-height {
-	background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll;
+	/*background: url('http://lorempixel.com/g/1920/500/') no-repeat center center scroll; */
+	background: url('images/T0.jpg');
+		
     padding: 50px 0;
 }
 

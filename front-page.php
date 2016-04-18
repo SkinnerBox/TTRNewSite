@@ -22,7 +22,8 @@ get_header(); ?>
             <div class="item active">
 		<a href="<?php echo get_site_url();?>/rejestracja/">
 		        <!-- Set the first background image using inline CSS below. -->
-		        <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/front/5_SKALP.jpg');"></div>
+		        <!-- <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/front/5_SKALP.jpg');"></div> -->
+			 <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/T11.jpg');"></div>
 		        <div class="carousel-caption">
 				<div class="frame">
 		            		<h2>Rejestracja otwarta!</h2>
@@ -33,7 +34,8 @@ get_header(); ?>
             <div class="item">
 		<a href="http://www.youtube.com/watch?v=Ehv0iriLTKE"> 
 		        <!-- Set the second background image using inline CSS below. -->
-		        <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+		      <!--  <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div> -->
+		       <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/T8.jpg');"></div>
 		        <div class="carousel-caption">
 				<div class="frame">
 					<h2>Caption 2</h2>
@@ -43,8 +45,9 @@ get_header(); ?>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
+                <!-- <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div> -->
+                 <div class="fill" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/T1.jpg');"></div>
+		<div class="carousel-caption">
 			<div class="frame">
 				<h2>Caption 3</h2>
 			</div>	

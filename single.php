@@ -6,11 +6,14 @@
   <div class="row">
     <div class="col-md-8">
      
+     
+     
       <!--Pobranie treści pojedynczego wpisu-->
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         
 	
-	<div class="col-md-3 col-md-push-9 col-sm-12 col-xs-12">      
+	
+	<div class="col-md-3 col-md-push-9 col-sm-24 col-xs-24">      
 		<div class="powrot">
 			<a class="btn btn-default" href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">Powrót</a>
 		</div>
@@ -18,8 +21,7 @@
 	</div>
 	
 	
-	
-        <div class="col-md-9 col-md-pull-3 col-sm-12 col-xs-12">
+        <div class="col-md-9 col-md-pull-3 col-sm-24 col-xs-24">
           <!--Wyświetlenie tytułu oraz autora pojedynczego wpisu-->
           <h2><?php the_title(); ?> <small><?php the_author(); ?></small></h2>
           <!--Wyświetlenie daty dodania wpisu-->
